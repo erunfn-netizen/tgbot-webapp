@@ -127,17 +127,17 @@
     /* Icon container with glow */
     .earn-icon-container {
       position: relative;
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 1.5rem;
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 1rem;
       animation: earnIconFloat 3s ease-in-out infinite;
     }
 
     .earn-icon-glow {
       position: absolute;
-      inset: -20px;
+      inset: -15px;
       background: radial-gradient(circle, rgba(16, 185, 129, 0.3) 0%, transparent 70%);
-      filter: blur(20px);
+      filter: blur(15px);
       animation: glowPulse 2s ease-in-out infinite;
       pointer-events: none;
     }
@@ -146,8 +146,8 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-      border-radius: 24px;
-      box-shadow: 0 8px 32px rgba(16, 185, 129, 0.25);
+      border-radius: 20px;
+      box-shadow: 0 6px 24px rgba(16, 185, 129, 0.25);
     }
 
     .earn-icon-symbol {
@@ -157,7 +157,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 40px;
+      font-size: 32px;
       z-index: 1;
     }
 
@@ -167,10 +167,10 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 800;
       text-align: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       letter-spacing: -0.02em;
       line-height: 1.2;
     }
@@ -180,11 +180,11 @@
       position: relative;
       background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
       border: 1px solid rgba(16, 185, 129, 0.15);
-      border-radius: 24px;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
+      border-radius: 20px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.25rem;
       overflow: hidden;
-      box-shadow: 0 4px 24px rgba(16, 185, 129, 0.08);
+      box-shadow: 0 4px 20px rgba(16, 185, 129, 0.08);
     }
 
     .earn-income-card::before {
@@ -192,25 +192,25 @@
       position: absolute;
       top: -50%;
       right: -50%;
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
       background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
       pointer-events: none;
     }
 
     .earn-income-label {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 600;
       color: #059669;
       text-align: center;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.375rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
 
     .earn-income-amount {
       font-family: 'Montserrat', sans-serif;
-      font-size: 48px;
+      font-size: 40px;
       font-weight: 900;
       background: linear-gradient(135deg, #059669 0%, #10b981 100%);
       -webkit-background-clip: text;
@@ -224,15 +224,15 @@
     /* Timeline styles */
     .earn-timeline {
       position: relative;
-      padding-left: 2rem;
+      padding-left: 1.75rem;
     }
 
     .earn-timeline::before {
       content: '';
       position: absolute;
-      left: 13px;
-      top: 12px;
-      bottom: 12px;
+      left: 11px;
+      top: 10px;
+      bottom: 10px;
       width: 2px;
       background: linear-gradient(180deg, #00a2fa 0%, #10b981 100%);
       opacity: 0.2;
@@ -241,8 +241,12 @@
 
     .earn-step {
       position: relative;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       opacity: 0;
+    }
+
+    .earn-step:last-child {
+      margin-bottom: 0;
     }
 
     .earn-step:nth-child(1) { animation: fadeInUp 0.5s ease-out 0.7s both; }
@@ -251,17 +255,17 @@
 
     .earn-step-number {
       position: absolute;
-      left: -2rem;
+      left: -1.75rem;
       top: 0;
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
       background: white;
       border: 2px solid #00a2fa;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       color: #00a2fa;
       box-shadow: 0 2px 8px rgba(0, 162, 250, 0.15);
@@ -269,21 +273,21 @@
     }
 
     .earn-step-content {
-      padding-top: 2px;
+      padding-top: 1px;
     }
 
     .earn-step-text {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600;
       color: #1e293b;
-      line-height: 1.5;
-      margin-bottom: 0.375rem;
+      line-height: 1.4;
+      margin-bottom: 0.25rem;
     }
 
     .earn-step-subtext {
-      font-size: 13px;
+      font-size: 12px;
       color: #64748b;
-      line-height: 1.5;
+      line-height: 1.4;
     }
 
     /* Premium CTA button */
@@ -293,13 +297,13 @@
       background: linear-gradient(135deg, #10b981 0%, #00a2fa 100%);
       color: white;
       font-weight: 700;
-      font-size: 16px;
-      padding: 1rem 2rem;
-      border-radius: 16px;
+      font-size: 15px;
+      padding: 0.875rem 2rem;
+      border-radius: 14px;
       border: none;
       cursor: pointer;
       overflow: hidden;
-      box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
       transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
       opacity: 0;
       animation: fadeInUp 0.5s ease-out 1.15s both;
@@ -323,12 +327,12 @@
 
     /* Section header */
     .earn-section-title {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       color: #64748b;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      margin-bottom: 1.25rem;
+      margin-bottom: 0.875rem;
       text-align: left;
       opacity: 0;
       animation: fadeInUp 0.5s ease-out 0.6s both;
@@ -342,8 +346,148 @@
 
     /* Responsive adjustments */
     @media (max-width: 375px) {
+      .earn-icon-container {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 0.875rem;
+      }
+
+      .earn-icon-symbol {
+        font-size: 28px;
+      }
+
       .earn-title {
-        font-size: 24px;
+        font-size: 22px;
+        margin-bottom: 0.875rem;
+      }
+
+      .earn-income-card {
+        padding: 0.875rem 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .earn-income-amount {
+        font-size: 36px;
+      }
+
+      .earn-step {
+        margin-bottom: 0.875rem;
+      }
+
+      .earn-step-text {
+        font-size: 13px;
+      }
+
+      .earn-step-subtext {
+        font-size: 11px;
+      }
+
+      .earn-cta {
+        font-size: 14px;
+        padding: 0.75rem 1.5rem;
+      }
+    }
+
+    @media (max-height: 700px) {
+      .earn-icon-container {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 0.75rem;
+      }
+
+      .earn-icon-symbol {
+        font-size: 28px;
+      }
+
+      .earn-title {
+        font-size: 22px;
+        margin-bottom: 0.75rem;
+      }
+
+      .earn-income-card {
+        padding: 0.875rem 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .earn-income-label {
+        font-size: 10px;
+        margin-bottom: 0.25rem;
+      }
+
+      .earn-income-amount {
+        font-size: 36px;
+      }
+
+      .earn-section-title {
+        font-size: 11px;
+        margin-bottom: 0.75rem;
+      }
+
+      .earn-step {
+        margin-bottom: 0.875rem;
+      }
+
+      .earn-step-text {
+        font-size: 13px;
+        line-height: 1.35;
+      }
+
+      .earn-step-subtext {
+        font-size: 11px;
+        line-height: 1.35;
+      }
+
+      .earn-cta {
+        font-size: 14px;
+        padding: 0.75rem 1.5rem;
+      }
+    }
+
+    @media (max-height: 650px) {
+      .earn-icon-container {
+        width: 52px;
+        height: 52px;
+        margin-bottom: 0.625rem;
+      }
+
+      .earn-icon-symbol {
+        font-size: 26px;
+      }
+
+      .earn-title {
+        font-size: 20px;
+        margin-bottom: 0.625rem;
+      }
+
+      .earn-income-card {
+        padding: 0.75rem 0.875rem;
+        margin-bottom: 0.875rem;
+      }
+
+      .earn-income-amount {
+        font-size: 32px;
+      }
+
+      .earn-section-title {
+        margin-bottom: 0.625rem;
+      }
+
+      .earn-step {
+        margin-bottom: 0.75rem;
+      }
+
+      .earn-step-text {
+        font-size: 12.5px;
+      }
+
+      .earn-step-subtext {
+        font-size: 10.5px;
+      }
+
+      .earn-cta {
+        padding: 0.625rem 1.25rem;
+      }
+    }
       }
 
       .earn-income-amount {
@@ -764,81 +908,85 @@
     </div>
 
 
-    <div id="modal-earn-info" class="fixed inset-0 bg-slate-900 bg-opacity-60 z-50 flex items-end justify-center hidden">
-      <div class="bg-white w-full max-w-lg rounded-t-3xl shadow-2xl p-6 pb-8 max-h-[90vh] overflow-y-auto earn-modal-content">
+    <div id="modal-earn-info" class="fixed inset-0 bg-slate-900 bg-opacity-60 z-50 flex items-center justify-center hidden" style="padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);">
+      <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl mx-4 earn-modal-content" style="max-height: calc(100dvh - 2rem); max-height: calc(100vh - 2rem); display: flex; flex-direction: column; overflow: hidden;">
 
-        <!-- Close button -->
-        <div class="flex justify-end mb-4">
-          <button id="btn-close-earn-info" class="text-slate-400 hover:text-slate-600 bg-slate-50 hover:bg-slate-100 p-2.5 rounded-full focus:outline-none transition-colors">
-            <i class="fa-solid fa-xmark text-lg"></i>
-          </button>
-        </div>
+        <!-- Scrollable content wrapper -->
+        <div style="flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 1.25rem 1.5rem 1.5rem;">
 
-        <!-- Icon with glow effect -->
-        <div class="earn-icon-container">
-          <div class="earn-icon-glow"></div>
-          <div class="earn-icon-bg"></div>
-          <div class="earn-icon-symbol">⚡</div>
-        </div>
+          <!-- Close button -->
+          <div class="flex justify-end mb-3">
+            <button id="btn-close-earn-info" class="text-slate-400 hover:text-slate-600 bg-slate-50 hover:bg-slate-100 p-2 rounded-full focus:outline-none transition-colors">
+              <i class="fa-solid fa-xmark text-base"></i>
+            </button>
+          </div>
 
-        <!-- Title -->
-        <h2 class="earn-title font-brand">
-          Начни зарабатывать
-        </h2>
+          <!-- Icon with glow effect -->
+          <div class="earn-icon-container">
+            <div class="earn-icon-glow"></div>
+            <div class="earn-icon-bg"></div>
+            <div class="earn-icon-symbol">⚡</div>
+          </div>
 
-        <!-- Income card -->
-        <div class="earn-income-card">
-          <p class="earn-income-label">Ты сможешь зарабатывать от</p>
-          <div class="earn-income-amount">2000 ₽</div>
-        </div>
+          <!-- Title -->
+          <h2 class="earn-title font-brand">
+            Начни зарабатывать
+          </h2>
 
-        <!-- Instructions section -->
-        <div class="mb-6">
-          <h3 class="earn-section-title">Инструкция</h3>
+          <!-- Income card -->
+          <div class="earn-income-card">
+            <p class="earn-income-label">Ты сможешь зарабатывать от</p>
+            <div class="earn-income-amount">2000 ₽</div>
+          </div>
 
-          <div class="earn-timeline">
-            <!-- Step 1 -->
-            <div class="earn-step">
-              <div class="earn-step-number">1</div>
-              <div class="earn-step-content">
-                <p class="earn-step-text">
-                  Зарегистрируйтесь, на сайте нашего партнера 🎉
-                </p>
-                <p class="earn-step-subtext">Кнпока находится ниже.</p>
+          <!-- Instructions section -->
+          <div class="mb-4">
+            <h3 class="earn-section-title">Инструкция</h3>
+
+            <div class="earn-timeline">
+              <!-- Step 1 -->
+              <div class="earn-step">
+                <div class="earn-step-number">1</div>
+                <div class="earn-step-content">
+                  <p class="earn-step-text">
+                    Зарегистрируйтесь, на сайте нашего партнера 🎉
+                  </p>
+                  <p class="earn-step-subtext">Кнпока находится ниже.</p>
+                </div>
               </div>
-            </div>
 
-            <!-- Step 2 -->
-            <div class="earn-step">
-              <div class="earn-step-number">2</div>
-              <div class="earn-step-content">
-                <p class="earn-step-text">
-                  Оплатите 1 ₽ за доступ к аналитике на 5 дней 🔓
-                </p>
-                <p class="earn-step-subtext">При оформлении PRO подписки открывается больше возможностей ⭐</p>
+              <!-- Step 2 -->
+              <div class="earn-step">
+                <div class="earn-step-number">2</div>
+                <div class="earn-step-content">
+                  <p class="earn-step-text">
+                    Оплатите 1 ₽ за доступ к аналитике на 5 дней 🔓
+                  </p>
+                  <p class="earn-step-subtext">При оформлении PRO подписки открывается больше возможностей ⭐</p>
+                </div>
               </div>
-            </div>
 
-            <!-- Step 3 -->
-            <div class="earn-step">
-              <div class="earn-step-number">3</div>
-              <div class="earn-step-content">
-                <p class="earn-step-text">
-                  Забирай гайд по заработку.
-                </p>
-                <p class="earn-step-subtext">Также бонус после регистрации от партнера 1000₽ 💸</p>
-                <p class="earn-step-subtext mt-1.5 italic">Сидим дома, получаем знания и зарабатываем</p>
+              <!-- Step 3 -->
+              <div class="earn-step">
+                <div class="earn-step-number">3</div>
+                <div class="earn-step-content">
+                  <p class="earn-step-text">
+                    Забирай гайд по заработку.
+                  </p>
+                  <p class="earn-step-subtext">Также бонус после регистрации от партнера 1000₽ 💸</p>
+                  <p class="earn-step-subtext mt-1 italic">Сидим дома, получаем знания и зарабатываем</p>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- CTA Button -->
+          <button id="btn-start-earning" class="earn-cta">
+            <span style="margin-right: 8px;">💸</span>
+            <span>Начать зарабатывать</span>
+          </button>
+
         </div>
-
-        <!-- CTA Button -->
-        <button id="btn-start-earning" class="earn-cta">
-          <span style="margin-right: 8px;">💸</span>
-          <span>Начать зарабатывать</span>
-        </button>
-
       </div>
     </div>
 
