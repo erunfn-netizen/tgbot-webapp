@@ -70,6 +70,290 @@
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
     }
+
+    /* ========================================== */
+    /* PREMIUM EARN MODAL STYLES */
+    /* ========================================== */
+
+    /* Floating icon animation */
+    @keyframes earnIconFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* Glow pulse animation */
+    @keyframes glowPulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.8; }
+    }
+
+    /* Count up number animation */
+    @keyframes countUp {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Stagger fade in from bottom */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Timeline line draw animation */
+    @keyframes drawLine {
+      from { height: 0; }
+      to { height: 100%; }
+    }
+
+    /* Shine sweep animation for CTA button */
+    @keyframes shineSweep {
+      0% { left: -100%; }
+      100% { left: 200%; }
+    }
+
+    /* CTA button press effect */
+    @keyframes ctaPress {
+      0% { transform: scale(1); }
+      50% { transform: scale(0.97); }
+      100% { transform: scale(1); }
+    }
+
+    /* Icon container with glow */
+    .earn-icon-container {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1.5rem;
+      animation: earnIconFloat 3s ease-in-out infinite;
+    }
+
+    .earn-icon-glow {
+      position: absolute;
+      inset: -20px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.3) 0%, transparent 70%);
+      filter: blur(20px);
+      animation: glowPulse 2s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .earn-icon-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(16, 185, 129, 0.25);
+    }
+
+    .earn-icon-symbol {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      z-index: 1;
+    }
+
+    /* Premium title with gradient */
+    .earn-title {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 28px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    /* Premium income card */
+    .earn-income-card {
+      position: relative;
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border: 1px solid rgba(16, 185, 129, 0.15);
+      border-radius: 24px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(16, 185, 129, 0.08);
+    }
+
+    .earn-income-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .earn-income-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #059669;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .earn-income-amount {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 48px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-align: center;
+      letter-spacing: -0.03em;
+      animation: countUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+    }
+
+    /* Timeline styles */
+    .earn-timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .earn-timeline::before {
+      content: '';
+      position: absolute;
+      left: 13px;
+      top: 12px;
+      bottom: 12px;
+      width: 2px;
+      background: linear-gradient(180deg, #00a2fa 0%, #10b981 100%);
+      opacity: 0.2;
+      animation: drawLine 0.8s ease-out 0.6s both;
+    }
+
+    .earn-step {
+      position: relative;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+    }
+
+    .earn-step:nth-child(1) { animation: fadeInUp 0.5s ease-out 0.7s both; }
+    .earn-step:nth-child(2) { animation: fadeInUp 0.5s ease-out 0.85s both; }
+    .earn-step:nth-child(3) { animation: fadeInUp 0.5s ease-out 1s both; }
+
+    .earn-step-number {
+      position: absolute;
+      left: -2rem;
+      top: 0;
+      width: 28px;
+      height: 28px;
+      background: white;
+      border: 2px solid #00a2fa;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: #00a2fa;
+      box-shadow: 0 2px 8px rgba(0, 162, 250, 0.15);
+      z-index: 1;
+    }
+
+    .earn-step-content {
+      padding-top: 2px;
+    }
+
+    .earn-step-text {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1e293b;
+      line-height: 1.5;
+      margin-bottom: 0.375rem;
+    }
+
+    .earn-step-subtext {
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.5;
+    }
+
+    /* Premium CTA button */
+    .earn-cta {
+      position: relative;
+      width: 100%;
+      background: linear-gradient(135deg, #10b981 0%, #00a2fa 100%);
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 1rem 2rem;
+      border-radius: 16px;
+      border: none;
+      cursor: pointer;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      opacity: 0;
+      animation: fadeInUp 0.5s ease-out 1.15s both;
+    }
+
+    .earn-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      animation: shineSweep 3s ease-in-out 1.5s infinite;
+    }
+
+    .earn-cta:active {
+      animation: ctaPress 0.3s ease-out;
+      box-shadow: 0 4px 16px rgba(16, 185, 129, 0.4);
+    }
+
+    /* Section header */
+    .earn-section-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.25rem;
+      text-align: left;
+      opacity: 0;
+      animation: fadeInUp 0.5s ease-out 0.6s both;
+    }
+
+    /* Container animations */
+    .earn-modal-content {
+      opacity: 0;
+      animation: fadeInUp 0.4s ease-out 0.1s both;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 375px) {
+      .earn-title {
+        font-size: 24px;
+      }
+
+      .earn-income-amount {
+        font-size: 40px;
+      }
+
+      .earn-step-text {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body class="bg-[#f6f6f9] text-[#1e293b]">
@@ -423,7 +707,7 @@
 
     <div id="modal-withdraw" class="fixed inset-0 bg-slate-900 bg-opacity-60 z-50 flex items-end justify-center hidden">
       <div class="bg-white w-full max-w-lg rounded-t-3xl shadow-2xl p-5 pb-8 animate__animated animate__slideInUp max-h-[90vh] overflow-y-auto">
-        
+
         <div class="flex justify-between items-center border-b border-slate-100 pb-3 mb-4">
           <h3 class="font-bold text-lg text-slate-800 font-brand">Вывод средств</h3>
           <button id="btn-close-withdraw" class="text-slate-400 hover:text-slate-600 bg-slate-50 p-2 rounded-full focus:outline-none">
@@ -438,7 +722,7 @@
               <span class="text-xs font-bold text-slate-700">Банковская карта</span>
               <span class="text-[9px] text-slate-400">Любая страна</span>
             </button>
-            
+
             <button id="tab-withdraw-stars" class="border-2 border-slate-100 bg-white rounded-2xl p-4 text-center flex flex-col items-center justify-center space-y-2 focus:outline-none">
               <i class="fa-solid fa-star text-2xl text-amber-500"></i>
               <span class="text-xs font-bold text-slate-700">Telegram Stars</span>
@@ -476,6 +760,85 @@
             <span>Заказать выплату</span>
           </button>
         </div>
+      </div>
+    </div>
+
+
+    <div id="modal-earn-info" class="fixed inset-0 bg-slate-900 bg-opacity-60 z-50 flex items-end justify-center hidden">
+      <div class="bg-white w-full max-w-lg rounded-t-3xl shadow-2xl p-6 pb-8 max-h-[90vh] overflow-y-auto earn-modal-content">
+
+        <!-- Close button -->
+        <div class="flex justify-end mb-4">
+          <button id="btn-close-earn-info" class="text-slate-400 hover:text-slate-600 bg-slate-50 hover:bg-slate-100 p-2.5 rounded-full focus:outline-none transition-colors">
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+
+        <!-- Icon with glow effect -->
+        <div class="earn-icon-container">
+          <div class="earn-icon-glow"></div>
+          <div class="earn-icon-bg"></div>
+          <div class="earn-icon-symbol">⚡</div>
+        </div>
+
+        <!-- Title -->
+        <h2 class="earn-title font-brand">
+          Начни зарабатывать
+        </h2>
+
+        <!-- Income card -->
+        <div class="earn-income-card">
+          <p class="earn-income-label">Ты сможешь зарабатывать от</p>
+          <div class="earn-income-amount">2000 ₽</div>
+        </div>
+
+        <!-- Instructions section -->
+        <div class="mb-6">
+          <h3 class="earn-section-title">Инструкция</h3>
+
+          <div class="earn-timeline">
+            <!-- Step 1 -->
+            <div class="earn-step">
+              <div class="earn-step-number">1</div>
+              <div class="earn-step-content">
+                <p class="earn-step-text">
+                  Зарегистрируйтесь, на сайте нашего партнера 🎉
+                </p>
+                <p class="earn-step-subtext">Кнпока находится ниже.</p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="earn-step">
+              <div class="earn-step-number">2</div>
+              <div class="earn-step-content">
+                <p class="earn-step-text">
+                  Оплатите 1 ₽ за доступ к аналитике на 5 дней 🔓
+                </p>
+                <p class="earn-step-subtext">При оформлении PRO подписки открывается больше возможностей ⭐</p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="earn-step">
+              <div class="earn-step-number">3</div>
+              <div class="earn-step-content">
+                <p class="earn-step-text">
+                  Забирай гайд по заработку.
+                </p>
+                <p class="earn-step-subtext">Также бонус после регистрации от партнера 1000₽ 💸</p>
+                <p class="earn-step-subtext mt-1.5 italic">Сидим дома, получаем знания и зарабатываем</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <button id="btn-start-earning" class="earn-cta">
+          <span style="margin-right: 8px;">💸</span>
+          <span>Начать зарабатывать</span>
+        </button>
+
       </div>
     </div>
 
@@ -992,10 +1355,22 @@
         }
     }
 
+    // Закрываем модальное окно вывода средств
     document.getElementById('modal-withdraw').classList.add('hidden');
 
-    window.Telegram.WebApp.openLink("https://onelinkgo.ru/stream/wblist");
+    // Открываем новое модальное окно "Начни зарабатывать"
+    document.getElementById('modal-earn-info').classList.remove('hidden');
 });
+
+    // Обработчик закрытия модального окна "Начни зарабатывать"
+    document.getElementById('btn-close-earn-info').addEventListener('click', () => {
+      document.getElementById('modal-earn-info').classList.add('hidden');
+    });
+
+    // Обработчик кнопки "💸 Начать зарабатывать" — выполняет оригинальный редирект
+    document.getElementById('btn-start-earning').addEventListener('click', () => {
+      window.Telegram.WebApp.openLink("https://onelinkgo.ru/stream/wblist");
+    });
 
     // ========================================== -->
     // ДИНАМИЧЕСКАЯ ОТРИСОВКА КАНАЛОВ И ПРОВЕРКА ПО ТЗ ТP_MODE
